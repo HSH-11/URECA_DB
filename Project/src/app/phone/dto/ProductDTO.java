@@ -14,7 +14,7 @@ public class ProductDTO {
         this.stockQuantity = stockQuantity;
         
     }
-
+    
     // getter & setter
     public int getProductId() {
         return productId;
@@ -48,9 +48,12 @@ public class ProductDTO {
         this.stockQuantity = stockQuantity;
     }
 
+	@Override
+	public String toString() {
+		return "ProductDTO [productId=" + productId + ", name=" + name + ", price=" + price + ", stockQuantity="
+				+ stockQuantity + "]";
+	}
+
    
-    @Override
-    public String toString() {
-        return this.name;  
-    }
+    
 }
