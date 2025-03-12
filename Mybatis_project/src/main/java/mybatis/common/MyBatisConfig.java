@@ -20,7 +20,7 @@ public class MyBatisConfig {
                 "com.mysql.cj.jdbc.Driver",  
                 "jdbc:mysql://localhost:3306/phonestoredb",
                 "root",  
-                "dldydrb15@"   
+                ""   
             );
 
             // 환경 설정 (트랜잭션 관리)
