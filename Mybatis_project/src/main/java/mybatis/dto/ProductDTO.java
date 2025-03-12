@@ -54,5 +54,8 @@ public class ProductDTO {
 		this.stockQuantity = stockQuantity;
 	}
     
-    
+	@Override
+    public String toString() {
+        return name;  
+    }
 }

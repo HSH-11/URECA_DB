@@ -47,7 +47,7 @@ public class ProductUserView extends JFrame {
         searchPanel.add(searchButton);
 
         orderButton = new JButton("상품 주문");
-//        orderButton.addActionListener(e -> openOrderForm());
+        orderButton.addActionListener(e -> openOrderForm());
 
         listButton = new JButton("새로고침");
         listButton.addActionListener(e -> listProducts());
@@ -113,9 +113,9 @@ public class ProductUserView extends JFrame {
         tableModel.setRowCount(0);
     }
 
-//    private void openOrderForm() {
-//        new OrderForm().setVisible(true);
-//    }
+    private void openOrderForm() {
+        new OrderForm().setVisible(true);
+    }
 
     private void openOrderHistory() {
         JOptionPane.showMessageDialog(this, "주문 내역 조회 기능은 아직 구현되지 않았습니다.");

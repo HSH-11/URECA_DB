@@ -33,4 +33,7 @@ public interface ProductDAO {
     @Delete("DELETE FROM Products WHERE product_id = #{productId}")
     int deleteProduct(int productId);
 	
+//    상품 재고 업데이트
+    @Update("UPDATE Products SET stock_quantity = #{newStock} WHERE product_id = #{productId}")
+    void updateStock(@Param("productId") int productId, @Param("newStock") int newStock);
 }

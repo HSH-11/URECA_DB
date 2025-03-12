@@ -28,7 +28,10 @@ public class MyBatisConfig {
             Configuration configuration = new Configuration(environment);
 
             // 매퍼 등록 (여기에 DAO 클래스 추가)
-            configuration.addMapper(mybatis.dao.ProductDAO.class); 
+            configuration.addMapper(mybatis.dao.ProductDAO.class);
+            configuration.addMapper(mybatis.dao.CustomerDAO.class);
+            configuration.addMapper(mybatis.dao.OrderDAO.class);
+            
 
             
             sqlSessionFactory = new SqlSessionFactoryBuilder().build(configuration);
