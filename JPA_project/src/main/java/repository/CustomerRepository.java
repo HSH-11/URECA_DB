@@ -85,5 +85,12 @@ public class CustomerRepository {
         em.close();
         return customer;
     }
+    
+    public Customer findCustomerById(int customerId) {
+        EntityManager em = emf.createEntityManager();
+        Customer customer = em.find(Customer.class, customerId);
+        em.close();
+        return customer;
+    }
 
 }

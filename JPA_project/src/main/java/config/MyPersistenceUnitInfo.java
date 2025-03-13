@@ -32,10 +32,10 @@ public class MyPersistenceUnitInfo implements PersistenceUnitInfo {
     //////////////////////////////// DataSource  설정
     @Override
     public DataSource getJtaDataSource() {
-        HikariDataSource dataSource = new HikariDataSource(); // Connectin Pool 구현체
+        HikariDataSource dataSource = new HikariDataSource(); 
         dataSource.setJdbcUrl("jdbc:mysql://localhost:3306/phonestoredb");
         dataSource.setUsername("root");
-        dataSource.setPassword("dldydrb15@");
+        dataSource.setPassword("");
         return dataSource;
     }
 	@Override
@@ -64,7 +64,7 @@ public class MyPersistenceUnitInfo implements PersistenceUnitInfo {
 	@Override
 	public List<String> getManagedClassNames() {
 		// TODO Auto-generated method stub
-		return List.of("entity.Customer","entity.Product");
+		return List.of("entity.Customer","entity.Product","entity.Order");
 	}	
 	@Override
 	public boolean excludeUnlistedClasses() {

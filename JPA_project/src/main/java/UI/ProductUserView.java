@@ -24,7 +24,7 @@ public class ProductUserView extends JFrame {
     private JTextField searchWordField;
     private JButton searchButton, orderButton, listButton, checkOrderButton, checkCouponButton;
 
-    private final ProductService productService = new ProductService(); // JPA 기반 서비스 사용
+    private final ProductService productService = new ProductService(); 
 
     public ProductUserView() {
         setTitle("상품 조회 및 주문");
@@ -36,7 +36,7 @@ public class ProductUserView extends JFrame {
         tableModel = new DefaultTableModel(new Object[]{"Product ID", "Name", "Price", "Stock"}, 0);
         table = new JTable(tableModel);
 
-        listProducts(); // ✅ 상품 목록 불러오기 (JPA)
+        listProducts(); // 상품 목록 불러오기
 
         // 검색 필드 설정
         Dimension textFieldSize = new Dimension(400, 28);
@@ -56,8 +56,8 @@ public class ProductUserView extends JFrame {
         searchPanel.add(searchWordField);
         searchPanel.add(searchButton);
 
-//        orderButton = new JButton("상품 주문");
-//        orderButton.addActionListener(e -> openOrderForm());
+        orderButton = new JButton("상품 주문");
+        orderButton.addActionListener(e -> openOrderForm());
 
         listButton = new JButton("새로고침");
         listButton.addActionListener(e -> listProducts());
@@ -70,6 +70,7 @@ public class ProductUserView extends JFrame {
 
         JPanel bottomPanel = new JPanel();
         bottomPanel.add(listButton);
+        bottomPanel.add(orderButton);
         bottomPanel.add(checkOrderButton);
         bottomPanel.add(checkCouponButton);
 
@@ -120,9 +121,9 @@ public class ProductUserView extends JFrame {
         tableModel.setRowCount(0);
     }
 
-//    private void openOrderForm() {
-//        new OrderForm().setVisible(true);
-//    }
+    private void openOrderForm() {
+        new OrderForm().setVisible(true);
+    }
 
     private void openOrderHistory() {
         JOptionPane.showMessageDialog(this, "주문 내역 조회 기능은 아직 구현되지 않았습니다.");
