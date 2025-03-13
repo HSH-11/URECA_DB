@@ -35,7 +35,7 @@ public class MyPersistenceUnitInfo implements PersistenceUnitInfo {
         HikariDataSource dataSource = new HikariDataSource(); // Connectin Pool 구현체
         dataSource.setJdbcUrl("jdbc:mysql://localhost:3306/jpa_basic");
         dataSource.setUsername("root");
-        dataSource.setPassword("dldydrb15@");
+        dataSource.setPassword("");
         return dataSource;
     }
 	@Override

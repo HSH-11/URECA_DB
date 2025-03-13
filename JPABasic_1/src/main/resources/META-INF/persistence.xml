@@ -10,7 +10,7 @@
             <property name="hibernate.connection.driver_class" value="com.mysql.cj.jdbc.Driver"/>
             <property name="hibernate.connection.url" value="jdbc:mysql://localhost:3306/jpa_basic"/>
             <property name="hibernate.connection.username" value="root"/>
-            <property name="hibernate.connection.password" value="dldydrb15@"/>
+            <property name="hibernate.connection.password" value=""/>
         </properties> 
     </persistence-unit>
 </persistence>
