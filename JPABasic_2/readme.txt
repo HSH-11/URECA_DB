@@ -1,0 +1,1 @@
+src/main/resources밑에 persistence.xml의 역할을 java config가 대신
