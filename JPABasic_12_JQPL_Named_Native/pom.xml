@@ -8,12 +8,12 @@
 	<name>JPABasic_12_JQPL_Named_Native</name>
 	<description>JPABasic_12_JQPL_Named_Native</description>
 	<dependencies>
-		<!-- JPA API -->
+		<!-- JPA API
 		<dependency>
 			<groupId>jakarta.persistence</groupId>
 			<artifactId>jakarta.persistence-api</artifactId>
 			<version>3.1.0</version>
-		</dependency>
+		</dependency> -->
 
 		<dependency>
 			<groupId>javax.persistence</groupId>
@@ -41,17 +41,5 @@
 			<version>5.1.0</version>
 		</dependency>
 
-		<!-- QueryDSL JPA (코어 포함) -->
-		<dependency>
-			<groupId>com.querydsl</groupId>
-			<artifactId>querydsl-jpa</artifactId>
-			<version>5.0.0</version>
-		</dependency>
-		<!-- (선택) PathBuilder만 쓰신다면 core만 추가해도 됩니다 -->
-		<dependency>
-			<groupId>com.querydsl</groupId>
-			<artifactId>querydsl-core</artifactId>
-			<version>5.0.0</version>
-		</dependency>
 	</dependencies>
 </project>

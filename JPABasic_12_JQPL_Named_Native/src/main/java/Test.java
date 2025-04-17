@@ -5,7 +5,6 @@ import java.util.Map;
 
 import org.hibernate.jpa.HibernatePersistenceProvider;
 
-import com.querydsl.jpa.impl.JPAQueryFactory;
 
 import config.MyPersistenceUnitInfo;
 import entity.Orders;
