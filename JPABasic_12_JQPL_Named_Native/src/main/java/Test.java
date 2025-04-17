@@ -81,22 +81,6 @@ public class Test {
 //		specificDateResults.forEach(o -> System.out.println("[Criteria] " + o));
 		
 		
-		// 1) JPAQueryFactory 생성
-		JPAQueryFactory queryFactory = new JPAQueryFactory(em);
-
-		// 2) Q타입 인스턴스 (컴파일 시점에 생성되어 있어야 함)
-		QOrders orders = QOrders.orders;
-
-		// 3) 쿼리 작성 및 실행: orderDate가 2024‑03‑11인 주문 조회
-		List<Orders> specificDateResults = queryFactory
-		    .selectFrom(orders)
-		    .where(orders.orderDate.eq(LocalDate.of(2024, 3, 11)))
-		    .fetch();
-
-		// 4) 결과 출력
-		specificDateResults.forEach(o -> System.out.println("[QueryDSL] " + o));
-
-
 		// Hibernate: select
 		// o1_0.id,o1_0.customer_id,o1_0.order_date,o1_0.order_quantity,o1_0.product_id
 		// from Orders o1_0 where o1_0.order_date=?
